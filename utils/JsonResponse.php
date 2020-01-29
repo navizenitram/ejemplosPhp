@@ -4,8 +4,8 @@
 namespace Utils;
 
 
-use ValueObject\Proveedores\JsonStatusCode;
-use ValueObject\Proveedores\StatusCode;
+use ValueObject\JsonStatusCode;
+use ValueObject\StatusCode;
 
 final class JsonResponse
 {
