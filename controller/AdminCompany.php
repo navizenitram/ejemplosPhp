@@ -7,6 +7,7 @@ use Service\Companies\AdminCompany\HistoryCompany;
 use Service\Companies\AdminCompany\HistoryCompanyDownloadXls;
 use Service\Companies\AdminCompany\UpdateHistoryComments;
 use Utils\XlsWritterPhpOffice;
+use ValueObject\Proveedores\CancelationReasons;
 
 class AdminCompany extends Admin {
 
@@ -30,7 +31,7 @@ class AdminCompany extends Admin {
 
     }
     public function cancelPremium() {
-        $reasons = \ValueObject\Proveedores\CancelationReasons::fromArray(
+        $reasons = CancelationReasons::fromArray(
             [
                 'comId' => Request::getParam('comId'),
                 'type' => Request::getParam('cancelReasonId'),
